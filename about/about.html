@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Creations</title>
+        <link rel="stylesheet" href="../style.css">
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <div class="full-page">
+            <div class="navbar">
+                <div>
+                    <a href="https://www.facebook.com/joivy11">Joivy</a>
+                </div>
+                <nav>
+                    <ul id="menu-item">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <button class="loginbtn" onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button>
+
+                        </li>
+                    </ul>
+                </nav>
+            </div>  
+
+            <div class="information">
+                <div class="overlay"></div>
+                <img src="../images/huu.jpg" alt="" class="huu">
+                <div id="circle">
+                    <div class="feature one">
+                        <h1>About Us</h1>
+                        <p>My name's Tuan Huu. <br> I'm 21 years old this year. <br> I came from Quang Ngai </p>    
+                    </div>
+                    <div class="feature two">
+                        <h1>Academic level</h1>
+                        <p>I'm currently a 3rd <br> year student at a University <br> of Information Technology.</p>
+                    </div>
+                    <div class="feature three">
+                        <h1>Interests</h1>
+                        <p>- Play sports <br> - Cooking <br> - Travel</p>
+                    </div>
+                    <div class="feature four">
+                        <h1>Communications</h1>
+                        <p>Phone: 0971477232 <br> Email: buituanhuu925@gmail.com </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <ion-icon name="chevron-up-circle-outline" id="up-btn"></ion-icon>
+                <h3>Features</h3>
+                <ion-icon name="chevron-down-circle-outline" id="down-btn"></ion-icon>
+            </div>
+        </div> 
+
+        <script>
+            var circle = document.getElementById('circle');
+            var up_btn = document.getElementById('up-btn');
+            var down_btn = document.getElementById('down-btn');
+            var rotateValue = circle.style.transform;
+            var rotateSum;
+
+            up_btn.onclick = function()
+            {
+                rotateSum = rotateValue + 'rotate(-90deg)';
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+
+            down_btn.onclick = function()
+            {
+                rotateSum = rotateValue + 'rotate(90deg)';
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+        </script>
+    </body>
+</html>
